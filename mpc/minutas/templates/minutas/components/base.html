@@ -10,6 +10,11 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
@@ -53,21 +58,9 @@
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
-
-        <li class="nav-item d-block d-lg-none">
-          <a class="nav-link nav-icon search-bar-toggle " href="#">
-            <i class="bi bi-search"></i>
-          </a>
-        </li><!-- End Search Icon-->
 
         <li class="nav-item dropdown">
 
@@ -289,14 +282,14 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="{% url 'minutas' %}">
-              <i class="bi bi-circle"></i><span>Resumen de Minutas por Barrio</span>
+            <a href="{% url 'minuta_caja' %}">
+              <i class="bi bi-circle"></i><span>Resumen de Minutas</span>
             </a>
           </li>
 
           <li>
             <a href="{% url 'ing_mont_barrio' %}">
-              <i class="bi bi-circle"></i><span>Ingresar Monto por Barrio</span>
+              <i class="bi bi-circle"></i><span>Resumen de Minutas por Barrio</span>
             </a>
           </li>
           <!--
@@ -368,17 +361,17 @@
           -->
         </ul>
       </li>
-      
+
       <!-- End Components Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Proximamente</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-journal-text"></i><span>Clientes</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Proximamente</span>
+            <a href="{% url 'legajo_cliente' %}">
+              <i class="bi bi-circle"></i><span>Legajo Cliente</span>
             </a>
           </li>
           <li>
@@ -418,7 +411,7 @@
       </li>
       -->
       <!-- End Tables Nav -->
-   
+
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-bar-chart"></i><span>Gráficos</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -557,6 +550,7 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>

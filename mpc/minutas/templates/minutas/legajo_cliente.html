@@ -1,0 +1,109 @@
+{% extends 'minutas/components/base.html' %}
+{% block main %}
+<section class="section">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon">
+                        <button type="button" class="btn btn-light"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+
+        </div>
+    </div>
+    <div class="row">
+        <!-- End Search Bar -->
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Legajo del Cliente</h5>
+
+                    <!-- Default Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Apellido/s</th>
+                                <th scope="col">Nombres/s</th>
+                                <th scope="col">Documento</th>
+                                <th scope="col">Barrio</th>
+                                <th scope="col">Mz</th>
+                                <th scope="col">Pc</th>
+                                <th scope="col">Actualización</th>
+                                <th scope="col">Aviso</th>
+                                <th scope="col">Nro</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ORUE</td>
+                                <td>JUSTINO ARIEL</td>
+                                <td>30776475</td>
+                                <td>RIGONATTO</td>
+                                <td>A</td>
+                                <td>15</td>
+                                <td>Cemento</td>
+                                <td></td>
+                                <td>1</td>
+                                <td>26-07-2022</td>
+                                <td>0.00</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Default Table Example -->
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Legajo del Cliente</h5>
+
+                    <!-- No Labels Form -->
+                    <form class="row g-3">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="Address">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="City">
+                        </div>
+                        <div class="col-md-4">
+                            <select id="inputState" class="form-select">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="Zip">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                        </div>
+                    </form><!-- End No Labels Form -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main %}
