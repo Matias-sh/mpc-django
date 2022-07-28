@@ -2,9 +2,9 @@ from django import forms
 from .models import *
 
 class LegajoClienteForm(forms.Form):
-    """
+    
     class Meta:
-        model =
+        model = BarrioDet
 
         fields = [
             'apellido',
