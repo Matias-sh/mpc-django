@@ -1,6 +1,8 @@
 from django import forms
 from .models import *
 
+
+"""
 class LegajoClienteForm(forms.Form):
     
     class Meta:
@@ -18,21 +20,19 @@ class LegajoClienteForm(forms.Form):
             'total'
         ]
         widgets = {
-            'apellido': forms.CharField()
-            'nombre': forms.CharField()
-            'documento': forms.IntegerField()
-            'barrio': forms.CharField()
-            'mz': forms.CharField()
-            'pc': forms.CharField()
-            'actualizacion': forms.CharField()
-            'aviso': forms.CharField()
-            'fecha_legajo_cliente': forms.DateField()
+            'apellido': forms.CharField(),
+            'nombre': forms.CharField(),
+            'documento': forms.IntegerField(),
+            'barrio': forms.CharField(),
+            'mz': forms.CharField(),
+            'pc': forms.CharField(),
+            'actualizacion': forms.CharField(),
+            'aviso': forms.CharField(),
+            'fecha_legajo_cliente': forms.DateField(),
             'total': forms.DecimalField()
         }    
-    """
 
 class AltaPagoForm(forms.Form):
-    """
     class Meta:
         model = 
 
@@ -49,4 +49,4 @@ class AltaPagoForm(forms.Form):
             'observaciones',
             'tipo_pago',
         ]
-    """
+"""
