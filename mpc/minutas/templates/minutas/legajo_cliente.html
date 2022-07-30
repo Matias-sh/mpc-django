@@ -27,77 +27,118 @@
                 <div class="card-body">
                     <h5 class="card-title">Legajo del Cliente</h5>
 
-                    <!-- Default Table -->
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Apellido/s</th>
-                                <th scope="col">Nombres/s</th>
-                                <th scope="col">Documento</th>
-                                <th scope="col">Barrio</th>
-                                <th scope="col">Mz</th>
-                                <th scope="col">Pc</th>
-                                <th scope="col">Actualización</th>
-                                <th scope="col">Aviso</th>
-                                <th scope="col">Nro</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ORUE</td>
-                                <td>JUSTINO ARIEL</td>
-                                <td>30776475</td>
-                                <td>RIGONATTO</td>
-                                <td>A</td>
-                                <td>15</td>
-                                <td>Cemento</td>
-                                <td></td>
-                                <td>1</td>
-                                <td>26-07-2022</td>
-                                <td>0.00</td>
-
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- End Default Table Example -->
+                    
+                    <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nro. Cuota</th>
+                        <th>Tipo Cuota</th>
+                        <th>Cuota Total</th>
+                        <th>Cuota + Interés</th>
+                        <th>% Gastos</th>
+                        <th>Gastos $</th>
+                        <th>% Interés</th>
+                        <th>Interés $</th>
+                        <th>Detalle</th>
+                        <th>Observaciones</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in cuota %}
+                    <tr>
+                        <td>{{c.id_cuota_cliente}}</td>
+                        <td>{{c.nro_cuota_cliente}}</td>
+                        <td>{{c.tipo_cuota}}</td>
+                        <td>{{c.cuota_total_pesos}}</td>
+                        <td>{{c.cuota_mas_interes}}</td>
+                        <td>{{c.porcentaje_gastos}}</td>
+                        <td>{{c.gastos_pesos}}</td>
+                        <td>{{c.porcentaje_interes}}</td>
+                        <td>{{c.interes_pesos}}</td>
+                        <td>{{c.detalle}}</td>
+                        <td>{{c.observaciones}}</td>
+                        <td>{{c.tipo_pago}}</td>
+                        <td><a href="edicionCuota/{{c.id_cuota_cliente}}" class="btn btn-info">Editar</a></td>
+                        <td><a href="eliminarCuota/{{c.id_cuota_cliente}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+                    
                 </div>
             </div>
-
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Legajo del Cliente</h5>
 
                     <!-- No Labels Form -->
-                    <form class="row g-3">
-                        <div class="col-md-12">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                    <form class="row g-3" method="POST" action="/registrarCuota/">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="txtNroCuotaCliente">Nro. Cuota:</label>
+                            <input type="Number" id="txtNroCuotaCliente" name="txtNroCuotaCliente" class="form-control" placeholder="Ingrese el numero de cuota del cliente"
+                                minlength="6" maxlength="6" required>
                         </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control" placeholder="Address">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="City">
-                        </div>
-                        <div class="col-md-4">
-                            <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
-                                <option>...</option>
+                        <div class="form-group">
+                            <label for="txtTipoCuota">Ingrese el tipo de cuota</label>
+                            <select id="txtTipoCuota" name="txtTipoCuota" class="form-control">
+                                <option value="Cuota" selected>Cuota</option>
+                                <option value="Cta. derecho posesión">Cta. derecho posesión</option>
+                                <option value="Adelanto Cuota">Adelanto Cuota</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" placeholder="Zip">
+                        <div class="form-group">
+                            <label for="txtCuotaTotalPesos">Cuota total:</label>
+                            <input type="Number" id="txtCuotaTotalPesos" name="txtCuotaTotalPesos" class="form-control" placeholder="Ingrese el numero de la cuota total en pesos" required>
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="reset" class="btn btn-secondary">Reset</button>
+                        <div class="form-group">
+                            <label for="txtCuotaMasInteres">Cuota + Interés:</label>
+                            <input type="Number" id="txtCuotaMasInteres" name="txtCuotaMasInteres" class="form-control" placeholder="Ingrese el numero de la cuota más los intereses"
+                                minlength="6" maxlength="6" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPorcentajeGastos">% Gastos:</label>
+                            <input type="Number" id="txtPorcentajeGastos" name="txtPorcentajeGastos" class="form-control" placeholder="Ingrese el porcentaje de gastos"
+                                minlength="6" maxlength="6" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtGastosPesos">Gastos $:</label>
+                            <input type="Number" id="txtGastosPesos" name="txtGastosPesos" class="form-control" placeholder="Ingrese el gasto en pesos"
+                                minlength="6" maxlength="6" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPorcentajeInteres">% Interés:</label>
+                            <input type="Number" id="txtPorcentajeInteres" name="txtPorcentajeInteres" class="form-control" placeholder="Ingrese el porcentaje de interes"
+                                minlength="6" maxlength="6" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtInteresPesos">Interés $:</label>
+                            <input type="Number" id="txtInteresPesos" name="txtInteresPesos" class="form-control" placeholder="Ingrese el interes en pesos"
+                                minlength="6" maxlength="6" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDetalle">Detalle:</label>
+                            <input type="text" id="txtDetalle" name="txtDetalle" class="form-control" placeholder="Ingrese detalle de la cuota"
+                                minlength="6" maxlength="6" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtObservaciones">Observaciones:</label>
+                            <input type="text" id="txtObservaciones" name="txtObservaciones" class="form-control" placeholder="Ingrese una observación"
+                                minlength="6" maxlength="6" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="select">Ingrese el tipo de pago</label>
+                                <select id="txtTipoPago" name="txtTipoPago" class="form-control">
+                                    <option value="Efectivo" selected>Efectivo</option>
+                                    <option value="Cheque">Cheque</option>
+                                    <option value="Debito">Debito</option>
+                                    <option value="Credito">Crédito</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
                         </div>
                     </form><!-- End No Labels Form -->
 

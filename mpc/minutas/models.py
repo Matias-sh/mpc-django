@@ -2,19 +2,10 @@ from django.db import models
 
 # Create your models here.
 
-class CuotaCliente(models.Model):
-    opciones = (
-        ("Cuota", "Cuota"),
-        ("Cta", "Cta. Derecho Posesión"),
-        ("Adelantoc", "Adelanto cuota")
-    )
-    opciones_pago = (
-        ("Efectivo", "Efectivo"),
-        ("Credito", "Credito")
-    )
+class Cuota(models.Model):
     id_cuota_cliente = models.AutoField(primary_key=True)
     nro_cuota_cliente = models.IntegerField()
-    tipo_cuota = models.CharField(max_length=40, choices=opciones)
+    tipo_cuota = models.CharField(max_length=40)
     cuota_total_pesos = models.DecimalField(max_digits=99999, decimal_places=2)
     cuota_mas_interes = models.DecimalField(max_digits=99999, decimal_places=2)
     porcentaje_gastos = models.DecimalField(max_digits=99999, decimal_places=2)
@@ -23,7 +14,7 @@ class CuotaCliente(models.Model):
     interes_pesos = models.DecimalField(max_digits=99999, decimal_places=2)
     detalle = models.CharField(max_length=500)
     observaciones = models.CharField(max_length=500)
-    tipo_pago = models.CharField(max_length=40, choices=opciones_pago)
+    tipo_pago = models.CharField(max_length=40)
 
 
 """

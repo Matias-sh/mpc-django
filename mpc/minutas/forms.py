@@ -1,6 +1,29 @@
+from tkinter import Widget
 from django import forms
 from .models import *
+"""
+class CuotaClienteForm(forms.Form):
 
+    class Meta:
+        model = CuotaCliente
+
+        fields = '__all__'
+
+        widgets = {
+            'nro_cuota_cliente': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'tipo_cuota': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'cuota_total_pesos': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'cuota_mas_interes': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'porcentaje_gastos': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'gastos pesos': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'porcentaje_interes': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'interes_pesos': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'detalle': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'observaciones': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'tipo_pago': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            
+        }
+"""
 
 """
 class LegajoClienteForm(forms.Form):

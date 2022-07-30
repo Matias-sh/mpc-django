@@ -1,0 +1,84 @@
+{% extends 'minutas/components/base.html' %}
+
+{% block main %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Edición de Cuota</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editarCuota/" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="txtCodigo" name="txtCodigo" value="{{cuota.id_cuota_cliente}}" class="form-control" placeholder="Código"
+                            minlength="6" maxlength="6" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtNroCuotaCliente">Nro. Cuota:</label>
+                        <input type="Number" id="txtNroCuotaCliente" name="txtNroCuotaCliente" class="form-control" placeholder="Ingrese el numero de cuota del cliente"
+                            minlength="6" maxlength="6" value="{{Cuota.nro_cuota_cliente}} required>
+                    </div>
+                    <div class="form-group">
+                        <label for="select">Ingrese el tipo de cuota</label>
+                        <select name="select" id="txtTipoCuota" name="txtNombre" class="form-control">
+                            <option value="Cuota" selected>Cuota</option>
+                            <option value="Cta. derecho posesión">Cta. derecho posesión</option>
+                            <option value="Adelanto Cuota">Adelanto Cuota</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCuotaTotalPesos">Cuota total:</label>
+                        <input type="Number" id="txtCuotaTotalPesos" name="txtCuotaTotalPesos" value="{{Cuota.cuota_total_pesos}} class="form-control" placeholder="Ingrese el numero de la cuota total en pesos" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCuotaMasInteres">Cuota + Interés:</label>
+                        <input type="Number" id="txtCuotaMasInteres" name="txtCuotaMasInteres" value="{{Cuota.cuota_mas_interes}} class="form-control" placeholder="Ingrese el numero de la cuota más los intereses"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPorcentajeGastos">% Gastos:</label>
+                        <input type="Number" id="txtPorcentajeGastos" name="txtPorcentajeGastos" value="{{Cuota.porcentaje_gastos}} class="form-control" placeholder="Ingrese el porcentaje de gastos"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtGastosPesos">Gastos $:</label>
+                        <input type="Number" id="txtGastosPesos" name="txtGastosPesos" value="{{Cuota.gastos_pesos}} class="form-control" placeholder="Ingrese el gasto en pesos"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPorcentajeInteres">% Interés:</label>
+                        <input type="Number" id="txtPorcentajeInteres" name="txtPorcentajeInteres" value="{{Cuota.porcentaje_interes}} class="form-control" placeholder="Ingrese el porcentaje de interes"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtInteresPesos">Interés $:</label>
+                        <input type="Number" id="txtInteresPesos" name="txtInteresPesos" value="{{Cuota.interes_pesos}} class="form-control" placeholder="Ingrese el interes en pesos"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtDetalle">Detalle:</label>
+                        <input type="text" id="txtDetalle" name="txtDetalle" value="{{Cuota.detalle}} class="form-control" placeholder="Ingrese detalle de la cuota"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtObservaciones">Observaciones:</label>
+                        <input type="text" id="txtObservaciones" name="txtObservaciones" value="{{Cuota.observaciones}} class="form-control" placeholder="Ingrese una observación"
+                            minlength="6" maxlength="6" required>
+                    </div>
+                    <div class="form-group">
+                            <label for="select">Ingrese el tipo de pago</label>
+                            <select name="select" id="txtTipoPago" name="txtTipoPago" class="form-control">
+                                <option value="Efectivo" selected>Efectivo</option>
+                                <option value="Cheque">Cheque</option>
+                                <option value="Debito">Debito</option>
+                                <option value="Credito">Crédito</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}
