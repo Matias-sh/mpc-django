@@ -1,6 +1,24 @@
-from tkinter import Widget
 from django import forms
 from .models import *
+
+class MinutaCajaForm(forms.ModelForm):
+    class Meta:
+        """model = MinutaCaja"""
+        fields = '__all__'
+        exclude = ['fecha_minuta']
+        widgets = {
+            'nro_minuta': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Minuta'}),
+            'fecha_minuta': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Fecha Minuta'}),
+            'nro_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja'}),
+            'nro_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja'}),
+            'nro_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja'}),
+            'nro_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja'}),
+            'nro_caja_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja Caja'}),
+            'nro_caja_caja_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja Caja Caja'}),
+            'nro_caja_caja_caja_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja Caja Caja Caja'}),
+
+        }
+
 """
 class CuotaClienteForm(forms.Form):
 

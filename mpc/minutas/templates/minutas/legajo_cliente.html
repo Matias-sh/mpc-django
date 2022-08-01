@@ -27,46 +27,47 @@
                 <div class="card-body">
                     <h5 class="card-title">Legajo del Cliente</h5>
 
-                    
+
                     <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nro. Cuota</th>
-                        <th>Tipo Cuota</th>
-                        <th>Cuota Total</th>
-                        <th>Cuota + Interés</th>
-                        <th>% Gastos</th>
-                        <th>Gastos $</th>
-                        <th>% Interés</th>
-                        <th>Interés $</th>
-                        <th>Detalle</th>
-                        <th>Observaciones</th>
-                        <th colspan="2">Opciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for c in cuota %}
-                    <tr>
-                        <td>{{c.id_cuota_cliente}}</td>
-                        <td>{{c.nro_cuota_cliente}}</td>
-                        <td>{{c.tipo_cuota}}</td>
-                        <td>{{c.cuota_total_pesos}}</td>
-                        <td>{{c.cuota_mas_interes}}</td>
-                        <td>{{c.porcentaje_gastos}}</td>
-                        <td>{{c.gastos_pesos}}</td>
-                        <td>{{c.porcentaje_interes}}</td>
-                        <td>{{c.interes_pesos}}</td>
-                        <td>{{c.detalle}}</td>
-                        <td>{{c.observaciones}}</td>
-                        <td>{{c.tipo_pago}}</td>
-                        <td><a href="edicionCuota/{{c.id_cuota_cliente}}" class="btn btn-info">Editar</a></td>
-                        <td><a href="eliminarCuota/{{c.id_cuota_cliente}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-                    
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nro. Cuota</th>
+                                <th>Tipo Cuota</th>
+                                <th>Cuota Total</th>
+                                <th>Cuota + Interés</th>
+                                <th>% Gastos</th>
+                                <th>Gastos $</th>
+                                <th>% Interés</th>
+                                <th>Interés $</th>
+                                <th>Detalle</th>
+                                <th>Observaciones</th>
+                                <th colspan="2">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for c in cuota %}
+                            <tr>
+                                <td>{{c.id_cuota_cliente}}</td>
+                                <td>{{c.nro_cuota_cliente}}</td>
+                                <td>{{c.tipo_cuota}}</td>
+                                <td>{{c.cuota_total_pesos}}</td>
+                                <td>{{c.cuota_mas_interes}}</td>
+                                <td>{{c.porcentaje_gastos}}</td>
+                                <td>{{c.gastos_pesos}}</td>
+                                <td>{{c.porcentaje_interes}}</td>
+                                <td>{{c.interes_pesos}}</td>
+                                <td>{{c.detalle}}</td>
+                                <td>{{c.observaciones}}</td>
+                                <td>{{c.tipo_pago}}</td>
+                                <td><a href="edicionCuota/{{c.id_cuota_cliente}}" class="btn btn-info">Editar</a></td>
+                                <td><a href="eliminarCuota/{{c.id_cuota_cliente}}"
+                                        class="btn btn-danger btnEliminacion">Eliminar</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
             <div class="card">
@@ -78,8 +79,9 @@
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="txtNroCuotaCliente">Nro. Cuota:</label>
-                            <input type="Number" id="txtNroCuotaCliente" name="txtNroCuotaCliente" class="form-control" placeholder="Ingrese el numero de cuota del cliente"
-                                minlength="6" maxlength="6" required>
+                            <input type="Number" id="txtNroCuotaCliente" name="txtNroCuotaCliente" class="form-control"
+                                placeholder="Ingrese el numero de cuota del cliente" minlength="6" maxlength="6"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="txtTipoCuota">Ingrese el tipo de cuota</label>
@@ -91,54 +93,59 @@
                         </div>
                         <div class="form-group">
                             <label for="txtCuotaTotalPesos">Cuota total:</label>
-                            <input type="Number" id="txtCuotaTotalPesos" name="txtCuotaTotalPesos" class="form-control" placeholder="Ingrese el numero de la cuota total en pesos" required>
+                            <input type="Number" id="txtCuotaTotalPesos" name="txtCuotaTotalPesos" class="form-control"
+                                placeholder="Ingrese el numero de la cuota total en pesos" required>
                         </div>
                         <div class="form-group">
                             <label for="txtCuotaMasInteres">Cuota + Interés:</label>
-                            <input type="Number" id="txtCuotaMasInteres" name="txtCuotaMasInteres" class="form-control" placeholder="Ingrese el numero de la cuota más los intereses"
-                                minlength="6" maxlength="6" required>
+                            <input type="Number" id="txtCuotaMasInteres" name="txtCuotaMasInteres" class="form-control"
+                                placeholder="Ingrese el numero de la cuota más los intereses" minlength="6"
+                                maxlength="6" required>
                         </div>
                         <div class="form-group">
                             <label for="txtPorcentajeGastos">% Gastos:</label>
-                            <input type="Number" id="txtPorcentajeGastos" name="txtPorcentajeGastos" class="form-control" placeholder="Ingrese el porcentaje de gastos"
-                                minlength="6" maxlength="6" required>
+                            <input type="Number" id="txtPorcentajeGastos" name="txtPorcentajeGastos"
+                                class="form-control" placeholder="Ingrese el porcentaje de gastos" minlength="6"
+                                maxlength="6" required>
                         </div>
                         <div class="form-group">
                             <label for="txtGastosPesos">Gastos $:</label>
-                            <input type="Number" id="txtGastosPesos" name="txtGastosPesos" class="form-control" placeholder="Ingrese el gasto en pesos"
-                                minlength="6" maxlength="6" required>
+                            <input type="Number" id="txtGastosPesos" name="txtGastosPesos" class="form-control"
+                                placeholder="Ingrese el gasto en pesos" minlength="6" maxlength="6" required>
                         </div>
                         <div class="form-group">
                             <label for="txtPorcentajeInteres">% Interés:</label>
-                            <input type="Number" id="txtPorcentajeInteres" name="txtPorcentajeInteres" class="form-control" placeholder="Ingrese el porcentaje de interes"
-                                minlength="6" maxlength="6" required>
+                            <input type="Number" id="txtPorcentajeInteres" name="txtPorcentajeInteres"
+                                class="form-control" placeholder="Ingrese el porcentaje de interes" minlength="6"
+                                maxlength="6" required>
                         </div>
                         <div class="form-group">
                             <label for="txtInteresPesos">Interés $:</label>
-                            <input type="Number" id="txtInteresPesos" name="txtInteresPesos" class="form-control" placeholder="Ingrese el interes en pesos"
-                                minlength="6" maxlength="6" required>
+                            <input type="Number" id="txtInteresPesos" name="txtInteresPesos" class="form-control"
+                                placeholder="Ingrese el interes en pesos" minlength="6" maxlength="6" required>
                         </div>
                         <div class="form-group">
                             <label for="txtDetalle">Detalle:</label>
-                            <input type="text" id="txtDetalle" name="txtDetalle" class="form-control" placeholder="Ingrese detalle de la cuota"
-                                minlength="6" maxlength="6" required>
+                            <input type="text" id="txtDetalle" name="txtDetalle" class="form-control"
+                                placeholder="Ingrese detalle de la cuota" minlength="6" maxlength="6" required>
                         </div>
                         <div class="form-group">
                             <label for="txtObservaciones">Observaciones:</label>
-                            <input type="text" id="txtObservaciones" name="txtObservaciones" class="form-control" placeholder="Ingrese una observación"
-                                minlength="6" maxlength="6" required>
+                            <input type="text" id="txtObservaciones" name="txtObservaciones" class="form-control"
+                                placeholder="Ingrese una observación" minlength="6" maxlength="6" required>
                         </div>
                         <div class="form-group">
-                                <label for="select">Ingrese el tipo de pago</label>
-                                <select id="txtTipoPago" name="txtTipoPago" class="form-control">
-                                    <option value="Efectivo" selected>Efectivo</option>
-                                    <option value="Cheque">Cheque</option>
-                                    <option value="Debito">Debito</option>
-                                    <option value="Credito">Crédito</option>
-                                </select>
+                            <label for="select">Ingrese el tipo de pago</label>
+                            <select id="txtTipoPago" name="txtTipoPago" class="form-control">
+                                <option value="Efectivo" selected>Efectivo</option>
+                                <option value="Cheque">Cheque</option>
+                                <option value="Debito">Debito</option>
+                                <option value="Credito">Crédito</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                            <button type="submit" id="guardar"
+                                class="btn btn-success btn-block text-white">Guardar</button>
                         </div>
                     </form><!-- End No Labels Form -->
 
@@ -147,4 +154,11 @@
         </div>
     </div>
 </section>
+<script>
+    $("#guardar").on("click", function (event) {
+        event.preventDefault();
+        // resto de tu codigo
+    });
+</script>
+
 {% endblock main %}

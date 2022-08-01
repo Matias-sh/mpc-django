@@ -7,7 +7,7 @@ urlpatterns = [
     path('ing_mont_barrio/', views.ing_mont_barrio, name="ing_mont_barrio"),
     path('legajo_cliente/', views.legajo_cliente, name="legajo_cliente"),
     path('registrarCuota/', views.registrarCuota),
-    path('legajo_cliente/edicionCuota/<codigo>', views.edicionCuota),
+    path('legajo_cliente/edicionCuota/<id_cuota_cliente>', views.edicionCuota),
     path('editarCuota/', views.editarCuota),
-    path('legajo_cliente/eliminarCuota/<codigo>', views.eliminarCuota)
+    path('legajo_cliente/eliminarCuota/<id_cuota_cliente>', views.eliminarCuota)
 ]

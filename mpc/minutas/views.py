@@ -49,7 +49,7 @@ def registrarCuota(request):
 
 def edicionCuota(request, id_cuota_cliente):
     cuota = Cuota.objects.get(id_cuota_cliente=id_cuota_cliente)
-    return render(request, "edicionCuota.html", {"Cuota": Cuota})
+    return render(request, "minutas/edicionCuota.html", {"cuota": cuota})
 
 
 def editarCuota(request):
