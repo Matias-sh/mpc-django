@@ -13,12 +13,62 @@ def minuta_caja(request):
 def ing_mont_barrio(request):
     return render(request, 'minutas/ing_mont_barrio.html')
 
+def nuevo_barrio(request):
+    if request.method == 'POST':
+        form = BarrioForm(data=request.POST)
+        if form.is_valid():
+            form_s = form.save(commit=False)
+            form_s.save()
+            return redirect('nuevo_barrio')
+    else:
+        form = BarrioForm()
+
+    barriosListados = Barrio.objects.all()
+    context = {
+        'form': form,
+        'barrio': barriosListados
+    }
+    
+    return render(request, 'minutas/nuevo_barrio.html', context)
+
+def nuevo_cliente(request):
+    if request.method == 'POST':
+        form = NuevoClienteForm(data=request.POST)
+        if form.is_valid():
+            form_s = form.save(commit=False)
+            form_s.save()
+            return redirect('nuevo_cliente')
+    else:
+        form = NuevoClienteForm()
+
+    clientesListados = Cliente.objects.all()
+    context = {
+        'form': form,
+        'cliente': clientesListados
+    }
+    
+    return render(request, 'minutas/nuevo_cliente.html', context)
+
 def legajo_cliente(request):
-    cuotasListadas = Cuota.objects.all()
-    return render(request, 'minutas/legajo_cliente.html', {'cuota': cuotasListadas})
+    if request.method == 'POST':
+        form = CuotaClienteForm(data=request.POST)
+        if form.is_valid():
+            form_s = form.save(commit=False)
+            form_s.save()
+            return redirect('legajo_cliente')
+    else:
+        form = CuotaClienteForm()
+
+    cuotasListadas = ClienteBarrioCuotas.objects.all()
+    context = {
+        'form': form,
+        'cuota': cuotasListadas
+    }
+    
+    return render(request, 'minutas/legajo_cliente.html', context)
 
 def registrarCuota(request):
-    nro_cuota_cliente = request.POST['txtNroCuotaCliente']
+    nro_cuota = request.POST['txtNroCuotaCliente']
     tipo_cuota = request.POST['txtTipoCuota']
     cuota_total_pesos = request.POST['txtCuotaTotalPesos']
     cuota_mas_interes = request.POST['txtCuotaMasInteres']
@@ -30,7 +80,7 @@ def registrarCuota(request):
     observaciones = request.POST['txtObservaciones']
     tipo_pago = request.POST['txtTipoPago']
 
-    cuota = Cuota.objects.create(
+    cuota = ClienteBarrioCuotas.objects.create(
         nro_cuota_cliente=nro_cuota_cliente,
         tipo_cuota=tipo_cuota,
         cuota_total_pesos=cuota_total_pesos,

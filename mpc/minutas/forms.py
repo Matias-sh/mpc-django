@@ -1,35 +1,17 @@
 from django import forms
 from .models import *
 
-class MinutaCajaForm(forms.ModelForm):
-    class Meta:
-        """model = MinutaCaja"""
-        fields = '__all__'
-        exclude = ['fecha_minuta']
-        widgets = {
-            'nro_minuta': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Minuta'}),
-            'fecha_minuta': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Fecha Minuta'}),
-            'nro_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja'}),
-            'nro_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja'}),
-            'nro_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja'}),
-            'nro_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja'}),
-            'nro_caja_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja Caja'}),
-            'nro_caja_caja_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja Caja Caja'}),
-            'nro_caja_caja_caja_caja_caja_caja_caja': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nro. Caja Caja Caja Caja Caja Caja Caja'}),
-
-        }
-
-"""
-class CuotaClienteForm(forms.Form):
+class CuotaClienteForm(forms.ModelForm):
 
     class Meta:
-        model = CuotaCliente
+        model = ClienteBarrioCuotas
 
         fields = '__all__'
 
         widgets = {
-            'nro_cuota_cliente': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
-            'tipo_cuota': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'id_cliente_barrio_det': forms.Select(attrs={'class': 'form-control', 'label': 'Cliente'}),
+            'nro_cuota': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'tipo_cuota': forms.Select(attrs={'class': 'form-control'}),
             'cuota_total_pesos': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
             'cuota_mas_interes': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
             'porcentaje_gastos': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
@@ -38,11 +20,67 @@ class CuotaClienteForm(forms.Form):
             'interes_pesos': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
             'detalle': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
             'observaciones': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
-            'tipo_pago': forms.TextInput(attrs={"placeholder": "Ingrese el numero de cuota de cliente", "class": "form-control"}),
+            'tipo_pago': forms.Select(attrs={'class': 'form-control'}),
             
         }
-"""
 
+
+
+class PersonaForm(forms.ModelForm):
+    
+    class Meta:
+        model = Persona
+        fields = '__all__'
+        widgets = {
+            'nombre': forms.TextInput(attrs={"placeholder": "Ingrese el nombre", "class": "form-control"}),
+            'apellido': forms.TextInput(attrs={"placeholder": "Ingrese el apellido", "class": "form-control"}),
+            'dni': forms.NumberInput(attrs={"placeholder": "Ingrese el dni", "class": "form-control"}),
+            'sexo': forms.Select(attrs={'class': 'form-control'}),
+            'fecha_nac': forms.DateInput(attrs={"placeholder": "Ingrese la fecha de nacimiento", "class": "form-control"}),
+            'detalle_persona': forms.TextInput(attrs={"placeholder": "Ingrese el detalle", "class": "form-control"}),
+        }
+
+class NuevoClienteForm(forms.ModelForm):
+    
+        class Meta:
+            model = ClienteBarrio
+
+            fields = '__all__'
+
+            widgets = {
+                'id_persona': forms.Select(attrs={'class': 'form-control'}),
+                'telefono': forms.NumberInput(attrs={"placeholder": "Ingrese el telefono", "class": "form-control"}),
+                'email': forms.EmailInput(attrs={"placeholder": "Ingrese el email", "class": "form-control"}),
+                'detalle_cliente': forms.TextInput(attrs={"placeholder": "Ingrese el detalle", "class": "form-control"}),
+            }
+
+class NuevoDueñoBarrioForm(forms.ModelForm):
+    class Meta:
+        model = DueñoBarrio
+        fields = '__all__'
+        widgets = {
+            'id_persona': forms.Select(attrs={'class': 'form-control'}),
+            'detalle_barrio': forms.TextInput(attrs={"placeholder": "Ingrese el detalle", "class": "form-control"}),
+        }
+
+class NuevoBarrioForm(forms.ModelForm):
+    class Meta:
+        model = Barrio
+        fields = '__all__'
+        widgets = {
+            'nombre_barrio': forms.TextInput(attrs={"placeholder": "Ingrese el nombre del barrio", "class": "form-control"}),
+            'detalle_barrio': forms.TextInput(attrs={"placeholder": "Ingrese el detalle", "class": "form-control"}),
+        }
+
+class ClienteBarrioForm(forms.ModelForm):
+    class Meta:
+        model = ClienteBarrio
+        fields = '__all__'
+        widgets = {
+            'id_cliente': forms.Select(attrs={'class': 'form-control'}),
+            'id_barrio': forms.Select(attrs={'class': 'form-control'}),
+            'cant_cuotas': forms.NumberInput(attrs={"placeholder": "Ingrese el numero de cuotas de cliente", "class": "form-control"}),
+        }
 """
 class LegajoClienteForm(forms.Form):
     

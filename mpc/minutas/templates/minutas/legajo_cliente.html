@@ -77,6 +77,8 @@
                     <!-- No Labels Form -->
                     <form class="row g-3" method="POST" action="/registrarCuota/">
                         {% csrf_token %}
+                        {{ form.as_p }}
+                        <!--
                         <div class="form-group">
                             <label for="txtNroCuotaCliente">Nro. Cuota:</label>
                             <input type="Number" id="txtNroCuotaCliente" name="txtNroCuotaCliente" class="form-control"
@@ -147,6 +149,7 @@
                             <button type="submit" id="guardar"
                                 class="btn btn-success btn-block text-white">Guardar</button>
                         </div>
+                    -->
                     </form><!-- End No Labels Form -->
 
                 </div>
@@ -154,11 +157,5 @@
         </div>
     </div>
 </section>
-<script>
-    $("#guardar").on("click", function (event) {
-        event.preventDefault();
-        // resto de tu codigo
-    });
-</script>
 
 {% endblock main %}

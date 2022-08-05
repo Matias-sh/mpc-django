@@ -9,5 +9,7 @@ urlpatterns = [
     path('registrarCuota/', views.registrarCuota),
     path('legajo_cliente/edicionCuota/<id_cuota_cliente>', views.edicionCuota),
     path('editarCuota/', views.editarCuota),
-    path('legajo_cliente/eliminarCuota/<id_cuota_cliente>', views.eliminarCuota)
+    path('legajo_cliente/eliminarCuota/<id_cuota_cliente>', views.eliminarCuota),
+    path('nuevo_cliente/', views.nuevo_cliente, name="nuevo_cliente"),
+    path('nuevo_barrio/', views.nuevo_barrio, name="nuevo_barrio"),
 ]

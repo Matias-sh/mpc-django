@@ -52,7 +52,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="{% url 'index' %}" class="logo d-flex align-items-center">
-        <img src="{% static 'img/logo.png' %}" alt="">
+        <img src="{% static 'img/logo_oficial.jpg' %}" alt="">
         <span class="d-none d-lg-block">Mi Primer Casa</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -390,7 +390,35 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Forms Nav -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#admin-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Administración</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="admin-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="{% url 'nuevo_cliente' %}">
+              <i class="bi bi-circle"></i><span>Agregar Nuevo Cliente</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'nuevo_barrio' %}">
+              <i class="bi bi-circle"></i><span>Agregar Nuevo Barrio</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-editors.html">
+              <i class="bi bi-circle"></i><span>Agregar Nuevo Dueño de Barrio</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-validation.html">
+              <i class="bi bi-circle"></i><span>Proximamente</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Forms Nav -->
       <!--
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
