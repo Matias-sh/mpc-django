@@ -3,10 +3,13 @@
 <div class="card-group">
   <div class="card">
     <div class="card-body">
-      <div class="alert alert-success" role="alert">
-        <strong>NUEVA PERSONA</strong>
+      <div>
+        <br>
+        <h1 class="text-center">Nueva Persona</h1>
+        <br>
       </div>
-      <form action="/personas/nueva_persona/" method="POST">
+      
+      <form action="" method="POST">
         {% csrf_token %}
         {{form}}
         <button type="submit" class="btn btn-primary">Enviar</button>

@@ -304,12 +304,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="#">
-              <i class="bi bi-circle"></i><span>Legajo Cliente</span>
+            <a href="{% url 'vista_clientes' %}">
+              <i class="bi bi-circle"></i><span>Clientes</span>
             </a>
           </li>
           <li>
-            <a href="{% url 'nueva_persona' %}">
+            <a href="{% url 'nuevo_cliente' %}">
               <i class="bi bi-circle"></i><span>Nuevo Cliente</span>
             </a>
           </li>
@@ -321,13 +321,28 @@
         </a>
         <ul id="admin-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
+            <a href="{% url 'vista_personas' %}">
+              <i class="bi bi-circle"></i><span>Ver Personas</span>
+            </a>
+          </li>
+          <li>
             <a href="{% url 'nueva_persona' %}">
               <i class="bi bi-circle"></i><span>Agregar Nueva Persona</span>
             </a>
           </li>
           <li>
+            <a href="{% url 'vista_barrios' %}">
+              <i class="bi bi-circle"></i><span>Ver Barrios</span>
+            </a>
+          </li>
+          <li>
             <a href="{% url 'nuevo_barrio' %}">
               <i class="bi bi-circle"></i><span>Agregar Nuevo Barrio</span>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'vista_dueniosBarrios' %}">
+              <i class="bi bi-circle"></i><span>Ver Dueños de Barrios</span>
             </a>
           </li>
           <li>

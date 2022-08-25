@@ -11,19 +11,21 @@
                     <th>Telefono</th>
                     <th>Email</th>
                     <th>Domicilio</th>
+                    <th>Telefono</th>
+                    <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
-                {% for persona in personas %}
+                {% for cliente in clientes %}
                 <tr>
-                    <td>{{persona.nombre}}</td>
-                    <td>{{persona.apellido}}</td>
-                    <td>{{persona.edad}}</td>
-                    <td>{{persona.telefono}}</td>
-                    <td>{{persona.email}}</td>
-                    <td>{{persona.domicilio}}</td>
-                    <td><a href="editar_persona/{{persona.id}}">Editar</a></td>
-                    <td><a href="eliminar_persona/{{persona.id}}">Borrar</a></td>
+                    <td>{{cliente.id_persona.nombre}}</td>
+                    <td>{{cliente.id_persona.apellido}}</td>
+                    <td>{{cliente.id_persona.edad}}</td>
+                    <td>{{cliente.id_persona.telefono}}</td>
+                    <td>{{cliente.id_persona.email}}</td>
+                    <td>{{cliente.id_persona.domicilio}}</td>
+                    <td>{{cliente.telefono}}</td>
+                    <td><a href="editar_cliente/{{cliente.id_cliente}}">Editar</a><b>/</b><a href="eliminar_cliente/{{cliente.id_cliente}}">Borrar</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

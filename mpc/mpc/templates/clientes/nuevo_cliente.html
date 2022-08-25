@@ -5,13 +5,13 @@
     <div class="card-body">
       <div>
         <br>
-        <h1 class="text-center">Nuevo Dueño</h1>
+        <h1 class="text-center">Nuevo Cliente</h1>
         <br>
       </div>
+      
       <form action="" method="POST">
         {% csrf_token %}
         {{form}}
-        <br>
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </div>
