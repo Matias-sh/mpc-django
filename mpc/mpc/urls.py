@@ -1,7 +1,7 @@
-"""mpc URL Configuration
+"""mpc2 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+    https://docs.djangoproject.com/en/4.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,5 +18,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('minutas.urls'))
+    path('', include('apps.inicio.urls')),
+    path('personas/', include('apps.personas.urls')),
+    path('usuarios/', include('apps.usuarios.urls')),
+    path('clientes/', include('apps.clientes.urls')),
+    path('barrios/', include('apps.barrios.urls')),
+    path('dueniosBarrios/', include('apps.dueniosBarrios.urls')),
 ]

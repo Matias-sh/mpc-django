@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="card-group">
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre del Dueño</th>
+                    <th>Detalle</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for duenio in duenios %}
+                <tr>
+                    <td>{{duenio.id_persona}}</td>
+                    <td>{{duenio.detalle_duenio}}</td>
+                    <td><a href="editar_duenio/{{duenio.id_dueniobarrio}}">Editar</a><b>/</b><a href="eliminar_duenio/{{duenio.id_dueniobarrio}}">Borrar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock main %}

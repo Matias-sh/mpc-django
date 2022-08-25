@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="card-group">
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre del Barrio</th>
+                    <th>Nombre del Dueño</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for barrio in barrios %}
+                <tr>
+                    <td>{{barrio.nombre_barrio}}</td>
+                    <td>{{barrio.id_dueniobarrio}}</td>
+                    <td><a href="editar_barrio/{{barrio.id}}">Editar</a><b>/</b><a href="eliminar_barrio/{{barrio.id}}">Borrar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock main %}
