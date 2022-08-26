@@ -1,0 +1,475 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="card">
+    <table class="table">
+        <tr>
+            <th>Fecha</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.fecha }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Hora Ingreso Efectivo</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.hora_ing_efectivo.time }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Hora Ingreso Minuta</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.hora_ing_minuta.time }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Efectivo Total</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.efectivo_total }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Efectivo MPC</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.efectivo_mpc }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Efectivo Banco</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.efectivo_banco }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Total</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.total_minuta }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Total Gasto Administrativo</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.total_gasto_adm }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Total a Rendir</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.total_rendir }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Calculo Total Minuta</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.calculo_total_minuta }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV1 M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv1_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV1 GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv1_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV1 TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv1_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV1 GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv1_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV2 M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv2_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV2 GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv2_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV2 TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv2_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DV2 GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dv2_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>RIGO M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.rigo_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>RIGO GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.rigo_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>RIGO TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.rigo_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>RIGO GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.rigo_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SI M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.si_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SI GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.si_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SI GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.si_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SI2 M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.si2_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SI2 GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.si2_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SI2 TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.si2_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SI2 GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.si2_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DER M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.der_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DER GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.der_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DER TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.der_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DER GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.der_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEA M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dea_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEA GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dea_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dea_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEA GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dea_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEE M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dee_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEE GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dee_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEE TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dee_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>DEE GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dee_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SA M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.sa_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SA GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.sa_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.sa_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>SA GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.sa_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>CETO M</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.ceto_m }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>CETO GA</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.ceto_ga }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>CETO TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.ceto_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>CETO GA TAR</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.ceto_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Debitos Clientes</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.debitos_clientes }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Debitos Inversiones</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.debitos_inversiones }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Debitos Pagos A</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.debitos_pagos_a }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Dolares en Pesos</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dolares_en_pesos }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Cheques</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.cheques }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Adhesiones</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.adhesiones }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Adhesiones AEI</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.adhesiones_aei }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Cuotas AEI</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.cuotas_aei }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Adhesiones Esperanza</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.adhesiones_esperanza }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Cuotas Esperanza</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.cuotas_esperanza }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Derecho Posesión</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.derecho_posesion }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Agrimensor</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.agrimensor }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Cuotas INM. Particulares</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.cuotas_inm_particulares }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Ingresos Gastos Administrativos</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.ingr_gastos_admin }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Vehiculos Financiados</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.vehiculos_financiados }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>BM Suscripciones</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.bm_sscripciones }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>BM Cuotas</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.bm_cuotas }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Interese Moratorios</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.interese_moratorios }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Adelantos Personal</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.adelantos_personal }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Egresos</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.egresos }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Cotizacion Dolar</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.cheques }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Efectivo MPC</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.efectivo_mpc }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Efectivo BM</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.efectivo_bm }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Efectivo AEI</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.efectivo_aei }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Efectivo Esperanza</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.efectivo_esperanza }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Dolares</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.dolares }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Numero de Minuta</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.num_minuta }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Personal</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.personal }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Sobrante</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.sobrante }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+{% endblock main %}
