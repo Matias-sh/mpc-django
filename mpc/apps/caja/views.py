@@ -23,4 +23,4 @@ def formulario_caja(request):
         'form': form
     }
 
-    return render(request, 'caja/formulario_caja.html', context)
+    return render(request, 'caja/formulario_caja2.html', context)
