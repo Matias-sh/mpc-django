@@ -83,7 +83,3 @@ class General(models.Model):
     personal = models.CharField(max_length=50, blank=True)
     sobrante = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, default=0)
 
-    def __str__(self):
-        txt = "Total:{0} , Ingresado por: {1}"
-        return txt.format(self.total_minuta, self.personal)
-
