@@ -1,8 +1,16 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
 .form-caja-minuta {
     width: 100%;
     height: 100%;
     outline: none;
-    background-color: rgb(230, 162, 61);
+    background-color: transparent;
     border: 0;
     border-radius: 0;
 }
