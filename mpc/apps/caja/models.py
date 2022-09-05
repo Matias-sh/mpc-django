@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 
 # Create your models here.
@@ -13,6 +14,7 @@ class General(models.Model):
     total_gasto_adm = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     total_rendir = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     calculo_total_minuta = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
+    ### campos minuta
     dv1_m = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     dv1_ga = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     dv1_tar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
@@ -61,6 +63,19 @@ class General(models.Model):
     apodaca_ga = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     apodaca_tar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     apodaca_ga_tar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    # fin campos detalles
+    cotizacion_dolar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    ingreso_mpc = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    ingreso_bm = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    ingreso_aei = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    ingreso_esperanza = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    dolares = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    num_minuta = models.IntegerField()
+    personal = models.CharField(max_length=50, blank=True)
+    sobrante = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+
+class EspMinuta(models.Model):
+    id_esp_minuta = models.AutoField(primary_key=True)
     debitos_clientes = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     debitos_inversiones = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     debitos_pagos_a = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
@@ -81,13 +96,7 @@ class General(models.Model):
     intereses_moratorios = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     adelantos_personal = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     egresos = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
-    cotizacion_dolar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
-    efectivo_mpc = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
-    efectivo_bm = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
-    efectivo_aei = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
-    efectivo_esperanza = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
-    dolares = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
-    num_minuta = models.IntegerField()
-    personal = models.CharField(max_length=50, blank=True)
-    sobrante = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
 
+class DetMinuta(models.Model):
+    id_general = models.ForeignKey(General, on_delete=models.CASCADE)
+    id_esp_minuta = models.ForeignKey(EspMinuta, on_delete=models.CASCADE)

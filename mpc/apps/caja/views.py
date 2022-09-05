@@ -13,14 +13,18 @@ def caja(request):
 def formulario_caja(request):
     if request.method == 'POST':
         form = CajaForm(request.POST)
-        if form.is_valid():
+        form2 = DetMinutaForm(request.POST)
+        if form.is_valid() and form2.is_valid():
             form.save()
+            form2.save()
             return redirect('vista_caja')
     else:
         form = CajaForm()
+        form2 = DetMinutaForm()
 
     context = {
-        'form': form
+        'form': form,
+        'form2': form2
     }
 
     return render(request, 'caja/cajona.html', context)

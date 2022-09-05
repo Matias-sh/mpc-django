@@ -6,17 +6,32 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] { -moz-appearance:textfield; }
 
+body {
+    display: grid;
+    grid-template-areas: "tablageneral tabladet "
+                            "tablageneral tabladet "
+                            "tablageneral tabladet ";
+}
+
+#tablageneral {
+    grid-area: tablageneral;
+}
+
+#tabladetdiv  {
+    grid-area: tabladet;
+}
+
 .form-caja-minuta {
-    width: 100%;
     height: 100%;
     outline: none;
     background-color: transparent;
     border: 0;
     border-radius: 0;
+    text-align: center;
 }
 
 .table-caja {
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .contenedor {
@@ -25,5 +40,10 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 td {
-    padding 0;
+    padding: 0;
 }
+
+input {
+    display: inline-block;
+}
+    
