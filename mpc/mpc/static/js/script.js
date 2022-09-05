@@ -67,5 +67,4 @@ function total_GA(){
             }
         }
     }
-    console.log(total_ga.value)
 };
