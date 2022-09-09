@@ -30,12 +30,12 @@ function total_M(){
         if(arr[i] != ""){
             total = total + parseFloat(arr[i])
             if(!(isNaN(total))){
-                total_m.value = total
+                total_m.innerHTML = '<h6>$' + total + '</h6>'
             }
         }else{
             total = total + total2
             if(!(isNaN(total))){
-                total_m.value = total
+                total_m.innerHTML = '<h6>$' + total + '</h6>'
             }
         }
     }
