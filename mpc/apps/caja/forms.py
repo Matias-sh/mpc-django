@@ -58,7 +58,7 @@ class CajaForm(forms.ModelForm):
         )
 
         widgets = {
-            'dv1_m': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'dv1_m', 'onKeyUp': 'total_M()'}),
+            'dv1_m': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'dv1_m', 'onKeyUp': 'total_M()', 'value': '$'}),
             'dv1_ga': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'dv1_ga', 'onKeyUp': 'total_GA()'}),
             'dv1_tar': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'dv1_tar', 'onKeyUp': 'total_TAR()'}),
             'dv1_ga_tar': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'dv1_ga_tar', 'onKeyUp': 'total_GA_TAR()'}),

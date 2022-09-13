@@ -45,6 +45,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
+
 <body>
 
   <!-- ======= Header ======= -->
@@ -265,229 +266,254 @@
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
-    <main id="main" class="main">
-        <div class="pagetitle">
-            <h1>Formulario Caja</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                    <li class="breadcrumb-item active">Formulario Caja</li>
-                </ol>
-            </nav>
-        </div><!-- End Page Title -->
-        
-        <section class="section dashboard">
-            <div class="row">
-        
-                <!-- Left side columns -->
-                <div class="col-lg-12">
-                    <div class="row">
-                        <!-- Sales Card -->
-                        <div class="col-xxl-6 col-md-6 col-xs-6">
-                            <div class="card info-card sales-card">
-        
-                                <div class="card-body">
-                                    <form action="" method="POST">
-                                        {% csrf_token %}
-                                        <table cellspacing="0" cellpadding="5" class="table table-striped-columns">
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">Barrio</th>
-                                                <th style="background-color: rgb(230, 162, 61)">Minuta </th>
-                                                <th>Gto Adm</th>
-                                                <th>Rendido</th>
-                                                <th>Total</th>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">DV1</th>
-                                                <div class="contenedor">
-                                                    <td>{{form.dv1_m}}</td>
-                                                </div>
-                                                <td>{{form.dv1_ga}}</td>
-                                                <td>{{form.dv1_tar}}</td>
-                                                <td>{{form.dv1_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">DV2</th>
-                                                <td>{{form.dv2_m}}</td>
-                                                <td>{{form.dv2_ga}}</td>
-                                                <td>{{form.dv2_tar}}</td>
-                                                <td>{{form.dv2_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">RIGO</th>
-                                                <td>{{form.rigo_m}}</td>
-                                                <td>{{form.rigo_ga}}</td>
-                                                <td>{{form.rigo_tar}}</td>
-                                                <td>{{form.rigo_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">SI</th>
-                                                <td>{{form.si_m}}</td>
-                                                <td>{{form.si_ga}}</td>
-                                                <td>{{form.si_tar}}</td>
-                                                <td>{{form.si_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">SI2</th>
-                                                <td>{{form.si2_m}}</td>
-                                                <td>{{form.si2_ga}}</td>
-                                                <td>{{form.si2_tar}}</td>
-                                                <td>{{form.si2_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">DE R</th>
-                                                <td>{{form.der_m}}</td>
-                                                <td>{{form.der_ga}}</td>
-                                                <td>{{form.der_tar}}</td>
-                                                <td>{{form.der_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">DE A</th>
-                                                <td>{{form.dea_m}}</td>
-                                                <td>{{form.dea_ga}}</td>
-                                                <td>{{form.dea_tar}}</td>
-                                                <td>{{form.dea_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">DE E</th>
-                                                <td>{{form.dee_m}}</td>
-                                                <td>{{form.dee_ga}}</td>
-                                                <td>{{form.dee_tar}}</td>
-                                                <td>{{form.dee_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">DE SA</th>
-                                                <td>{{form.sa_m}}</td>
-                                                <td>{{form.sa_ga}}</td>
-                                                <td>{{form.sa_tar}}</td>
-                                                <td>{{form.sa_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">CECO</th>
-                                                <td>{{form.ceto_m}}</td>
-                                                <td>{{form.ceto_ga}}</td>
-                                                <td>{{form.ceto_tar}}</td>
-                                                <td>{{form.ceto_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">GARA</th>
-                                                <td>{{form.gara_m}}</td>
-                                                <td>{{form.gara_ga}}</td>
-                                                <td>{{form.gara_tar}}</td>
-                                                <td>{{form.gara_ga_tar}}</td>
-                                            </tr>
-                                            <tr>
-                                                <th style="background-color: rgb(230, 162, 61)">APODACA</th>
-                                                <td>{{form.apodaca_m}}</td>
-                                                <td>{{form.apodaca_ga}}</td>
-                                                <td>{{form.apodaca_tar}}</td>
-                                                <td>{{form.apodaca_ga_tar}}</td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </div>
-                            </div>
-                        </div><!-- End Sales Card -->
-                        <br><br>
-        
-                        <!-- Revenue Card -->
-                        <div class="col-xxl-3 col-md-3">
-                          <div class="card info-card revenue-card">
-                              
-                            <div class="card-body">
-                                <h5 class="card-title">Total <span>| Minuta</span></h5>
-      
-                                <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-currency-dollar"></i>
-                                    </div>
-                                    <div class="ps-3">
-                                        <div id="total_m"><h6></h6></div>
-                                        <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                              class="text-muted small pt-2 ps-1">Incremento</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                          </div>
-                          <div class="card info-card revenue-card">
-                              
-                            <div class="card-body">
-                                <h5 class="card-title">Total <span>| Rendido</span></h5>
-      
-                                <div class="d-flex align-items-center">
-                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                        <i class="bi bi-currency-dollar"></i>
-                                    </div>
-                                    <div class="ps-3">
-                                        <h6><input type="text" class="form-control form-caja-minuta" readonly></h6>
-                                        <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                              class="text-muted small pt-2 ps-1">Incremento</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                          </div>
-                      </div>
-                        <div class="col-xxl-3 col-md-3">
-                            <div class="card info-card revenue-card">
-                                
-                              <div class="card-body">
-                                  <h5 class="card-title">Total <span>| gasto Administrativo</span></h5>
-        
-                                  <div class="d-flex align-items-center">
-                                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                          <i class="bi bi-currency-dollar"></i>
-                                      </div>
-                                      <div class="ps-3">
-                                          <h6><input type="text" class="form-control form-caja-minuta" readonly></h6>
-                                          <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                                class="text-muted small pt-2 ps-1">Incremento</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="card info-card revenue-card">
-                                
-                              <div class="card-body">
-                                  <h5 class="card-title">Total <span></span></h5>
-        
-                                  <div class="d-flex align-items-center">
-                                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                          <i class="bi bi-currency-dollar"></i>
-                                      </div>
-                                      <div class="ps-3">
-                                          <h6><input type="text" class="form-control form-caja-minuta" readonly></h6>
-                                          <span class="text-success small pt-1 fw-bold">8%</span> <span
-                                                class="text-muted small pt-2 ps-1">Incremento</span>
-                                      </div>
-                                  </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Formulario Caja</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb-item active">Formulario Caja</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-12">
+          <div class="row">
+            <!-- Sales Card -->
+            <div class="col-xxl-6 col-md-6 col-xs-6">
+              <div class="card info-card sales-card">
+
+                <div class="card-body">
+                  <form action="" method="POST">
+                    {% csrf_token %}
+                    <table cellspacing="0" cellpadding="5" class="table table-striped-columns">
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">Barrio</th>
+                        <th style="background-color: rgb(230, 162, 61)">Minuta </th>
+                        <th>Gto Adm</th>
+                        <th>Rendido</th>
+                        <th>Total</th>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">DV1</th>
+                        <td>{{form.dv1_m}}</td>
+                        <td>{{form.dv1_ga}}</td>
+                        <td>{{form.dv1_tar}}</td>
+                        <td>{{form.dv1_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">DV2</th>
+                        <td>{{form.dv2_m}}</td>
+                        <td>{{form.dv2_ga}}</td>
+                        <td>{{form.dv2_tar}}</td>
+                        <td>{{form.dv2_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">RIGO</th>
+                        <td>{{form.rigo_m}}</td>
+                        <td>{{form.rigo_ga}}</td>
+                        <td>{{form.rigo_tar}}</td>
+                        <td>{{form.rigo_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">SI</th>
+                        <td>{{form.si_m}}</td>
+                        <td>{{form.si_ga}}</td>
+                        <td>{{form.si_tar}}</td>
+                        <td>{{form.si_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">SI2</th>
+                        <td>{{form.si2_m}}</td>
+                        <td>{{form.si2_ga}}</td>
+                        <td>{{form.si2_tar}}</td>
+                        <td>{{form.si2_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">DE R</th>
+                        <td>{{form.der_m}}</td>
+                        <td>{{form.der_ga}}</td>
+                        <td>{{form.der_tar}}</td>
+                        <td>{{form.der_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">DE A</th>
+                        <td>{{form.dea_m}}</td>
+                        <td>{{form.dea_ga}}</td>
+                        <td>{{form.dea_tar}}</td>
+                        <td>{{form.dea_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">DE E</th>
+                        <td>{{form.dee_m}}</td>
+                        <td>{{form.dee_ga}}</td>
+                        <td>{{form.dee_tar}}</td>
+                        <td>{{form.dee_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">DE SA</th>
+                        <td>{{form.sa_m}}</td>
+                        <td>{{form.sa_ga}}</td>
+                        <td>{{form.sa_tar}}</td>
+                        <td>{{form.sa_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">CECO</th>
+                        <td>{{form.ceto_m}}</td>
+                        <td>{{form.ceto_ga}}</td>
+                        <td>{{form.ceto_tar}}</td>
+                        <td>{{form.ceto_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">GARA</th>
+                        <td>{{form.gara_m}}</td>
+                        <td>{{form.gara_ga}}</td>
+                        <td>{{form.gara_tar}}</td>
+                        <td>{{form.gara_ga_tar}}</td>
+                      </tr>
+                      <tr>
+                        <th style="background-color: rgb(230, 162, 61)">APODACA</th>
+                        <td>{{form.apodaca_m}}</td>
+                        <td>{{form.apodaca_ga}}</td>
+                        <td>{{form.apodaca_tar}}</td>
+                        <td>{{form.apodaca_ga_tar}}</td>
+                      </tr>
+                    </table>
+                  </form>
                 </div>
+              </div>
+            </div><!-- End Sales Card -->
+            <br><br>
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-3 col-md-3">
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Total <span>| Minuta</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <div id="total_m">
+                        <h6>$0</h6>
+                      </div>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span
+                        class="text-muted small pt-2 ps-1">Incremento</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Total <span>| Rendido</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <div id="total_tar">
+                        <h6>$0</h6>
+                      </div>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span
+                        class="text-muted small pt-2 ps-1">Incremento</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-        </section>
-    </main>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-  
-  
-    <!-- Vendor JS Files -->
-    <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'vendor/chart.js' %}/chart.min.js' %}"></script>
-    <script src="{% static 'vendor/echarts/echarts.min.js' %}"></script>
-    <script src="{% static 'vendor/quill/quill.min.js' %}"></script>
-    <script src="{% static 'vendor/simple-datatables/simple-datatables.js' %}"></script>
-    <script src="{% static 'vendor/tinymce/tinymce.min.js' %}"></script>
-    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
-  
-    <!-- Template Main JS File -->
-    <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/script.js' %}"></script>
-  
-  </body>
-  
-  </html>
+            <div class="col-xxl-3 col-md-3">
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Total <span>| gasto Administrativo</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <div id="total_ga">
+                        <h6>$0</h6>
+                      </div>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span
+                        class="text-muted small pt-2 ps-1">Incremento</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Total <span>| Minuta | Gasto Adm | Rendido</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <div id="">
+                        <h6>$0</h6>
+                      </div>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span
+                        class="text-muted small pt-2 ps-1">Incremento</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Total <span>| Ingresado por Usuario</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <div id="total_ga_tar">
+                        <h6>$0</h6>
+                      </div>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span
+                        class="text-muted small pt-2 ps-1">Incremento</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/chart.js' %}/chart.min.js' %}"></script>
+  <script src="{% static 'vendor/echarts/echarts.min.js' %}"></script>
+  <script src="{% static 'vendor/quill/quill.min.js' %}"></script>
+  <script src="{% static 'vendor/simple-datatables/simple-datatables.js' %}"></script>
+  <script src="{% static 'vendor/tinymce/tinymce.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>
