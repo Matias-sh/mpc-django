@@ -8,23 +8,8 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-body {
-    display: grid;
-    grid-template-areas: "tablageneral tabladet "
-        "tablageneral tabladet "
-        "tablageneral tabladet ";
-}
-
 .td-form {
     display: inline-flex;
-}
-
-#tablageneral {
-    grid-area: tablageneral;
-}
-
-#tabladetdiv {
-    grid-area: tabladet;
 }
 
 .form-caja-minuta {
@@ -47,10 +32,6 @@ body {
 .contenedor {
     display: inline-block;
     min-width: 80px;
-}
-
-td {
-    padding: 0;
 }
 
 input {

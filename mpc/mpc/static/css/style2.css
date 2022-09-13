@@ -249,7 +249,7 @@ h6 {
 }
 
 .card-title {
-  padding: 20px 0 15px 0;
+  padding: 5px 0 15px 0;
   font-size: 18px;
   font-weight: 500;
   color: #700101;
@@ -263,7 +263,7 @@ h6 {
 }
 
 .card-body {
-  padding: 0 20px 20px 20px;
+  padding: 10px;
 }
 
 .card-img-overlay {
@@ -815,7 +815,7 @@ h6 {
 
 /* Info Cards */
 .dashboard .info-card {
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 .dashboard .info-card h6 {

@@ -290,7 +290,7 @@
                 <div class="card-body">
                   <form action="" method="POST">
                     {% csrf_token %}
-                    <table cellspacing="0" cellpadding="5" class="table table-striped-columns">
+                    <table cellspacing="0" cellpadding="5" class="table table-sm table-bordered" style="text-align: center;">
                       <tr>
                         <th style="background-color: rgb(230, 162, 61)">Barrio</th>
                         <th style="background-color: rgb(230, 162, 61)">Minuta </th>
@@ -462,7 +462,7 @@
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <div id="">
+                      <div id="total_m_ga_tar">
                         <h6>$0</h6>
                       </div>
                       <span class="text-success small pt-1 fw-bold">8%</span> <span
@@ -498,6 +498,8 @@
   </main>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+  <input type="number" id="totaltodos" readonly hidden>
 
 
   <!-- Vendor JS Files -->
