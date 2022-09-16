@@ -290,7 +290,8 @@
                 <div class="card-body">
                   <form action="" method="POST">
                     {% csrf_token %}
-                    <table cellspacing="0" cellpadding="5" class="table table-sm table-bordered" style="text-align: center;">
+                    <table cellspacing="0" cellpadding="5" class="table table-sm table-bordered"
+                      style="text-align: center;">
                       <tr>
                         <th style="background-color: rgb(230, 162, 61)">Barrio</th>
                         <th style="background-color: rgb(230, 162, 61)">Minuta </th>
@@ -383,7 +384,6 @@
                         <td>{{form.apodaca_ga_tar}}</td>
                       </tr>
                     </table>
-                  </form>
                 </div>
               </div>
             </div><!-- End Sales Card -->
@@ -490,9 +490,16 @@
                   </div>
                 </div>
               </div>
+              <div class="card-body">
+                <div class="ps-3">
+                  <input type="submit" value="Guardar" class="form-control">
+                </div>
+              </div>
             </div>
           </div>
+          </form>
         </div>
+      </div>
       </div>
     </section>
   </main>

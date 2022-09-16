@@ -1,7 +1,9 @@
-from pyexpat import model
 from django.db import models
 
 # Create your models here.
+
+"""
+
 class General(models.Model):
     id_general = models.AutoField(primary_key=True)
     fecha = models.DateField(auto_now_add=True, blank=True)
@@ -100,3 +102,5 @@ class EspMinuta(models.Model):
 class DetMinuta(models.Model):
     id_general = models.ForeignKey(General, on_delete=models.CASCADE)
     id_esp_minuta = models.ForeignKey(EspMinuta, on_delete=models.CASCADE)
+    
+    """
