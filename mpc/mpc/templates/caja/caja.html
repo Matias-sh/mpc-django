@@ -39,27 +39,33 @@
             {% endfor %}
         </tr>
         <tr>
-            <th>Total</th>
+            <th>Total M/GA/TAR</th>
             {% for caja in tabla_general %}
-            <td>{{ caja.total_minuta }}</td>
+            <td>{{ caja.total_m_ga_tar }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Total Ingresado por Cajero</th>
+            {% for caja in tabla_general %}
+            <td>{{ caja.total_ingresado }}</td>
             {% endfor %}
         </tr>
         <tr>
             <th>Total Gasto Administrativo</th>
             {% for caja in tabla_general %}
-            <td>{{ caja.total_gasto_adm }}</td>
+            <td>{{ caja.total_ga }}</td>
             {% endfor %}
         </tr>
         <tr>
             <th>Total a Rendir</th>
             {% for caja in tabla_general %}
-            <td>{{ caja.total_rendir }}</td>
+            <td>{{ caja.total_tar }}</td>
             {% endfor %}
         </tr>
         <tr>
             <th>Calculo Total Minuta</th>
             {% for caja in tabla_general %}
-            <td>{{ caja.calculo_total_minuta }}</td>
+            <td>{{ caja.total_m }}</td>
             {% endfor %}
         </tr>
         <tr>

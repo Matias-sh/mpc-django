@@ -266,7 +266,7 @@
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
-  <main id="main" class="main">
+  <main>
     <div class="pagetitle">
       <h1>Formulario Caja</h1>
       <nav>
@@ -383,7 +383,11 @@
                         <td>{{form.apodaca_ga_tar}}</td>
                       </tr>
                     </table>
-                  </form>
+                    {{ form.total_m }}
+                    {{ form.total_ga }}
+                    {{ form.total_tar }}
+                    {{ form.total_m_ga_tar }}
+                    {{ form.total_ingresado }}
                 </div>
               </div>
             </div><!-- End Sales Card -->
@@ -404,8 +408,10 @@
                       <div id="total_m">
                         <h6>$0</h6>
                       </div>
+                      <!--
                       <span class="text-success small pt-1 fw-bold">8%</span> <span
                         class="text-muted small pt-2 ps-1">Incremento</span>
+                        -->
                     </div>
                   </div>
                 </div>
@@ -424,8 +430,10 @@
                       <div id="total_tar">
                         <h6>$0</h6>
                       </div>
+                      <!--
                       <span class="text-success small pt-1 fw-bold">8%</span> <span
                         class="text-muted small pt-2 ps-1">Incremento</span>
+                      -->
                     </div>
                   </div>
                 </div>
@@ -446,8 +454,10 @@
                       <div id="total_ga">
                         <h6>$0</h6>
                       </div>
+                      <!--
                       <span class="text-success small pt-1 fw-bold">8%</span> <span
                         class="text-muted small pt-2 ps-1">Incremento</span>
+                      -->
                     </div>
                   </div>
                 </div>
@@ -465,8 +475,10 @@
                       <div id="total_m_ga_tar">
                         <h6>$0</h6>
                       </div>
+                      <!--
                       <span class="text-success small pt-1 fw-bold">8%</span> <span
                         class="text-muted small pt-2 ps-1">Incremento</span>
+                      -->
                     </div>
                   </div>
                 </div>
@@ -484,12 +496,18 @@
                       <div id="total_ga_tar">
                         <h6>$0</h6>
                       </div>
+                      <!--
                       <span class="text-success small pt-1 fw-bold">8%</span> <span
                         class="text-muted small pt-2 ps-1">Incremento</span>
+                      -->
                     </div>
                   </div>
                 </div>
               </div>
+                <div class="card-body">
+                  <input type="submit" value="Guardar" class="form-control">
+                </div>
+              </form>
             </div>
           </div>
         </div>

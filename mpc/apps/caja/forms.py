@@ -55,6 +55,11 @@ class CajaForm(forms.ModelForm):
             'apodaca_ga',
             'apodaca_tar',
             'apodaca_ga_tar',
+            'total_m',
+            'total_ga',
+            'total_tar',
+            'total_m_ga_tar',
+            'total_ingresado',
         )
 
         widgets = {
@@ -106,6 +111,11 @@ class CajaForm(forms.ModelForm):
             'apodaca_ga': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'apodaca_ga', 'onKeyUp': 'total_GA()'}),
             'apodaca_tar': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'apodaca_tar', 'onKeyUp': 'total_TAR()'}),
             'apodaca_ga_tar': forms.NumberInput(attrs={'class': 'form-control form-caja-minuta', 'id': 'apodaca_ga_tar', 'onKeyUp': 'total_GA_TAR()'}),
+            'total_m': forms.NumberInput(attrs={'id': 'invi_total_m', 'readonly':'true', 'hidden': 'true'}),
+            'total_ga': forms.NumberInput(attrs={'id': 'invi_total_ga', 'readonly':'true', 'hidden': 'true'}),
+            'total_tar': forms.NumberInput(attrs={'id': 'invi_total_tar', 'readonly':'true', 'hidden': 'true'}),
+            'total_m_ga_tar': forms.NumberInput(attrs={'id': 'invi_total_m_ga_tar', 'readonly':'true', 'hidden': 'true'}),
+            'total_ingresado': forms.NumberInput(attrs={'id': 'invi_total_ingresado', 'readonly':'true', 'hidden': 'true'}),
             ### Fin inputs del form minuta
         }
         

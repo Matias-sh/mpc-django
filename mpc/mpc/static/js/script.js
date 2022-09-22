@@ -8,6 +8,11 @@ var total_tar = document.getElementById("total_tar");
 var total_ga_tar = document.getElementById("total_ga_tar");
 var total_m_ga_tar_a = document.getElementById("total_m_ga_tar");
 var totaltodos = document.getElementById("totaltodos");
+var input_total_m = document.getElementById("invi_total_m");
+var input_total_ga = document.getElementById("invi_total_ga");
+var input_total_tar = document.getElementById("invi_total_tar");
+var input_total_m_ga_tar = document.getElementById("invi_total_m_ga_tar");
+var input_total_ingresado = document.getElementById("invi_total_ingresado");
 
 
 function agregarFila() {
@@ -41,18 +46,23 @@ function total_M() {
             total = total + parseFloat(arr[i])
             if (!(isNaN(total))) {
                 total_m.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_m.value = total
+                console.log(input_total_m.value)
                 total_m_v = total
                 totaltodos.value = total_m_v + total_ga_v + total_tar_v;
                 total_m_ga_tar_a.innerHTML = '<h6>$' + totaltodos.value + '</h6>'
+                input_total_m_ga_tar.value = totaltodos.value
             }
             
         } else {
             total = total + total2
             if (!(isNaN(total))) {
                 total_m.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_m.value = total
                 total_m_v = total
                 totaltodos.value = total_m_v + total_ga_v + total_tar_v;
                 total_m_ga_tar_a.innerHTML = '<h6>$' + totaltodos.value + '</h6>'
+                input_total_m_ga_tar.value = totaltodos.value
             }
         }
     }
@@ -85,17 +95,21 @@ function total_GA() {
             total = total + parseFloat(arr[i])
             if (!(isNaN(total))) {
                 total_ga.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_ga.value = total
                 total_ga_v = total
                 totaltodos.value = total_m_v + total_ga_v + total_tar_v;
                 total_m_ga_tar_a.innerHTML = '<h6>$' + totaltodos.value + '</h6>'
+                input_total_m_ga_tar.value = totaltodos.value
             }
         } else {
             total = total + total2
             if (!(isNaN(total))) {
                 total_ga.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_ga.value = total
                 total_ga_v = total
                 totaltodos.value = total_m_v + total_ga_v + total_tar_v;
                 total_m_ga_tar_a.innerHTML = '<h6>$' + totaltodos.value + '</h6>'
+                input_total_m_ga_tar.value = totaltodos.value
             }
         }
     }
@@ -120,7 +134,6 @@ function total_TAR() {
     arr.push(apodaca_tar = document.getElementById("apodaca_tar").value);
 
     
-    total_m_ga_tar_a = document.getElementById("total_m_ga_tar");
 
     let total2 = 0
     for (let i = 0; i <= arr.length; i++) {
@@ -128,17 +141,21 @@ function total_TAR() {
             total = total + parseFloat(arr[i])
             if (!(isNaN(total))) {
                 total_tar.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_tar.value = total
                 total_tar_v = total
                 totaltodos.value = total_m_v + total_ga_v + total_tar_v;
                 total_m_ga_tar_a.innerHTML = '<h6>$' + totaltodos.value + '</h6>'
+                input_total_m_ga_tar.value = totaltodos.value
             }
         } else {
             total = total + total2
             if (!(isNaN(total))) {
                 total_tar.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_tar.value = total
                 total_tar_v = total
                 totaltodos.value = total_m_v + total_ga_v + total_tar_v;
                 total_m_ga_tar_a.innerHTML = '<h6>$' + totaltodos.value + '</h6>'
+                input_total_m_ga_tar.value = totaltodos.value
             }
         }
     }
@@ -170,11 +187,13 @@ function total_GA_TAR() {
             total = total + parseFloat(arr[i])
             if (!(isNaN(total))) {
                 total_ga_tar.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_ingresado.value = total
             }
         } else {
             total = total + total2
             if (!(isNaN(total))) {
                 total_ga_tar.innerHTML = '<h6>$' + total + '</h6>'
+                input_total_ingresado.value = total
             }
         }
     }
