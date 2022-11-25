@@ -7,6 +7,7 @@ class CajaForm(forms.ModelForm):
         model = General
 
         fields = (
+            'id_general',
             'dv1_m',
             'dv1_ga',
             'dv1_tar',
@@ -117,8 +118,27 @@ class CajaForm(forms.ModelForm):
             'total_m_ga_tar': forms.NumberInput(attrs={'id': 'invi_total_m_ga_tar', 'readonly':'true', 'hidden': 'true'}),
             'total_ingresado': forms.NumberInput(attrs={'id': 'invi_total_ingresado', 'readonly':'true', 'hidden': 'true'}),
             ### Fin inputs del form minuta
+            
         }
         
         labels = {
 
+        }
+
+class MinDetForm(forms.ModelForm):
+    class Meta:
+        model = MinDet
+
+        fields = (
+            'codigo',
+            'detalle',
+            'especificacion',
+            'monto',
+        )
+
+        widgets = {
+            'codigo': forms.TextInput(attrs={'id': 'td-det-0', 'onkeyup': 'cod_DET(this)'}),
+            'detalle': forms.TextInput(attrs={'class': 'form-caja-minuta', 'id': 'det-det-1', 'readonly': 'true'}),
+            'especificacion': forms.TextInput(attrs={'class': 'form-caja-minuta esp-det'}),
+            'monto': forms.NumberInput(attrs={'class': 'form-caja-minuta mont-det'}),
         }

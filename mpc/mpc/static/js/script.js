@@ -198,3 +198,557 @@ function total_GA_TAR() {
         }
     }
 };
+
+function cod_DET(celda){
+    if (celda.value == "A"){
+        let color = "#F3FF00"
+        let txt = "DEBITOS DE CLIENTES"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+        
+    }else if (celda.value == "B"){
+        let color = "#F3FF00"
+        let txt = "DEBITOS DE PAGOS A"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }else if (celda.value == "C"){
+        let color = "#F3FF00"
+        let txt = "DEBITOS EN PESOS"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+    else if (celda.value == "D"){
+        let color = "#F3FF00"
+        let txt = "CHEQUES"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+    else if (celda.value == "E"){
+        let color = "#F3FF00"
+        let txt = "ADELANTOS PERSONAL"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+    else if (celda.value == "F"){
+        let color = "#FF0000"
+        let txt = "DEBITOS DE INVERSIONES"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+    else if (celda.value == "G"){
+        let color = "#FF0000"
+        let txt = "EGRESOS"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+    else if (celda.value == "H"){
+        let color = "#FF0000"
+        let txt = "EGRESOS DE GERENCIA"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+    else if (celda.value == "I"){
+        let color = "#FFC000"
+        let txt = "ADHESIONES"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+    else if (celda.value == "J"){
+        let color = "#FFC000"
+        let txt = "SEÑA DE ADHESIONES"
+        celda.style.backgroundColor=color
+        if(parseInt(celda.id.slice(-2))>= 10){
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+        }else{
+            celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+        }
+        celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+        
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+        }else{
+            console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+            celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+        }
+        if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+        }else{
+            celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+        }
+    }
+        else if (celda.value == "K"){
+            let color = "#FFC000"
+            let txt = "CTAS ADELANTADAS"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "L"){
+            let color = "#FFCCFF"
+            let txt = "ADHESIONES AEI"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "M"){
+            let color = "#FFCCFF"
+            let txt = "CUOTAS AEI"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "N"){
+            let color = "#FFCCFF"
+            let txt = "ADHESIONES ESPERANZA"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "Ñ"){
+            let color = "#FFCCFF"
+            let txt = "CUOTAS ESPERANZA"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "O"){
+            let color = "#FFFFFF"
+            let txt = "DERECHO DE POSESION"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "P"){
+            let color = "#FFFFFF"
+            let txt = "AGRIMENSOR"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "Q"){
+            let color = "#FFFFFF"
+            let txt = "CUOTAS INM. PARTICULARES"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "R"){
+            let color = "#FFFFFF"
+            let txt = "INGR. GASTOS ADMIN"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "S"){
+            let color = "#FFFFFF"
+            let txt = "VEHICULOS FINANCIADOS"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "T"){
+            let color = "#DAE3F3"
+            let txt = "BM POSESION"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "U"){
+            let color = "#DAE3F3"
+            let txt = "BM CUOTAS"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+        else if (celda.value == "V"){
+            let color = "#FFFFFF"
+            let txt = "INTERESES MORATORIOS"
+            celda.style.backgroundColor=color
+            if(parseInt(celda.id.slice(-2))>= 10){
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-2)) + 1)).value = txt
+            }else{
+                celda2_txt = document.getElementById("det-det-" + (parseInt(celda.id.slice(-1)) + 1)).value = txt
+            }
+            celda2 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 1)).style.backgroundColor=color
+            
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2)).style.backgroundColor=color
+            }else{
+                console.log((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 2))
+                celda3 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 2)).style.backgroundColor=color
+            }
+            if((celda.id.substr(0, celda.id.length - 1)).slice(-1) > 0){
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 2)) + (parseInt(celda.id.slice(-2)) + 3)).style.backgroundColor=color
+            }else{
+                celda4 = document.getElementById((celda.id.substr(0, celda.id.length - 1)) + (parseInt(celda.id.slice(-1)) + 3)).style.backgroundColor=color
+            }
+        }
+}

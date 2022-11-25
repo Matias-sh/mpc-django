@@ -56,10 +56,13 @@
         <img src="{% static 'img/logo_oficial.jpg' %}" alt="">
         <span class="d-none d-lg-block">Mi Primer Casa</span>
       </a>
-      {% block togglebutton %}
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-      {% endblock togglebutton %}
+      <a href="{% url 'inicio' %}" class="btn">Inicio</a>
     </div><!-- End Logo -->
+
+    <!-- Button trigger modal -->
+  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalDet">
+    Agregar detalles
+  </button>
 
 
     <nav class="header-nav ms-auto">
@@ -389,12 +392,14 @@
                     {{ form.total_tar }}
                     {{ form.total_m_ga_tar }}
                     {{ form.total_ingresado }}
+                    
                 </div>
               </div>
             </div><!-- End Sales Card -->
             <br><br>
 
             <!-- Revenue Card -->
+            
             <div class="col-xxl-3 col-md-3">
               <div class="card info-card revenue-card">
 
@@ -517,6 +522,43 @@
   </main>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="modalDet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="card-body">
+                <div id="tabladetdiv">
+                    <table align="right" cellspacing="0" border="0" id="tabladet">
+                      <tr>
+                        <td style="border-top: 2px double #000000; border-bottom: 2px double #000000; border-left: 2px double #000000; border-right: 2px double #000000" align="center" valign=middle><font color="#000000">COD.</font></td>
+                        <td style="border-top: 2px double #000000; border-bottom: 2px double #000000; border-left: 2px double #000000; border-right: 2px double #000000" align="center" valign=middle><font color="#000000">DETALLE</font></td>
+                        <td style="border-top: 2px double #000000; border-bottom: 2px double #000000; border-left: 2px double #000000; border-right: 2px double #000000" align="center" valign=middle><font color="#000000">ESPECIFICACION</font></td>
+                        <td style="border-bottom: 2px double #000000; border-top: 2px double #000000; border-left: 2px double #000000; border-right: 2px double #000000" align="center" valign=middle><font color="#000000">MONTO</font></td>
+                      </tr>
+                      <tr>
+                          <td id ="td-det-0" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center">{{ form2.codigo }}</td>
+                          <td id ="td-det-1" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdnum="11274;0;&quot;$&quot; #.##0,00"><b><font color="#FFFFFF">{{ form2.detalle }}</font></b></td>
+                          <td id ="td-det-2" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center"><strong>{{ form2.especificacion }}</td>
+                          <td id ="td-det-3" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle sdval="300" sdnum="11274;0;&quot;$&quot; #.##0,00"><b><font color="#FFFFFF">{{ form2.monto }}</font></b></td>
+                      </tr>
+                    </table>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
 
   <input type="number" id="totaltodos" readonly hidden>
 

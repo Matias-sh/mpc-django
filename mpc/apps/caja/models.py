@@ -4,6 +4,8 @@ from django.db import models
 
 class General(models.Model):
     id_general = models.AutoField(primary_key=True)
+    fecha = models.DateTimeField()
+    cotizacion_dolar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     dv1_m = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     dv1_ga = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     dv1_tar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
@@ -57,7 +59,16 @@ class General(models.Model):
     total_tar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     total_m_ga_tar = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
     total_ingresado = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
+    ###
 
+
+class MinDet(models.Model):
+    id_mindet = models.AutoField(primary_key=True)
+    id_general = models.ForeignKey(General, on_delete=models.CASCADE)
+    codigo = models.CharField(max_length=50, blank=True)
+    detalle = models.CharField(max_length=50, blank=True)
+    especificacion = models.CharField(max_length=50, blank=True)
+    monto = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, )
 
 """
 class General(models.Model):
